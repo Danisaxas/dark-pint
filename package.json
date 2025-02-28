@@ -1,14 +1,11 @@
 {
   "name": "dark-pint",
   "version": "1.0.0",
+  "license": "MIT",  // Puedes cambiar esto a la licencia que prefieras
   "scripts": {
-    "start": "node index.js", 
-    "build": "webpack --mode production"
+    "start": "node index.js"
   },
   "dependencies": {
     "express": "^4.17.1"
-  },
-  "devDependencies": {
-    "webpack": "^5.0.0"
   }
 }
