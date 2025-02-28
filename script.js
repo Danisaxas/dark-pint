@@ -1,56 +1,56 @@
-// Lista de códigos que se mostrarán
-const codeLines = [
-  "const arr = ['PHP', 'HTML', 'CSS'];",
-  "function myFunction() { return 'JavaScript'; }",
-  "const python = 'Python';",
-  "let x = 10; console.log(x);",
-  "if (user === 'admin') { access = true; }"
+// Códigos para animar
+const codes = [
+    "$arr = ['PHP', 'HTML', 'CSS'];",
+    "console.log('Hola Mundo');",
+    "let x = 10; let y = 20; console.log(x + y);",
+    "def saludo(): print('Hola desde Python');"
 ];
 
-let codeIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
-const codeText = document.getElementById("code-text");
+let index = 0;
+let textIndex = 0;
+let deleting = false;
+const codeElement = document.getElementById("code");
 
-function typeCode() {
-  const currentCode = codeLines[codeIndex];
-
-  if (!isDeleting) {
-    // Escribiendo letra por letra
-    codeText.textContent = currentCode.substring(0, charIndex + 1);
-    charIndex++;
-
-    if (charIndex === currentCode.length) {
-      isDeleting = true;
-      setTimeout(typeCode, 1500); // Espera antes de borrar
-      return;
+function typeEffect() {
+    if (!deleting) {
+        // Escribiendo letra por letra
+        if (textIndex < codes[index].length) {
+            codeElement.innerHTML += codes[index][textIndex];
+            textIndex++;
+            setTimeout(typeEffect, 100);
+        } else {
+            // Esperar antes de borrar
+            setTimeout(() => {
+                deleting = true;
+                typeEffect();
+            }, 2000);
+        }
+    } else {
+        // Borrando letra por letra
+        if (textIndex > 0) {
+            codeElement.innerHTML = codes[index].substring(0, textIndex - 1);
+            textIndex--;
+            setTimeout(typeEffect, 50);
+        } else {
+            // Cambiar al siguiente código
+            deleting = false;
+            index = (index + 1) % codes.length;
+            setTimeout(typeEffect, 500);
+        }
     }
-  } else {
-    // Borrando letra por letra
-    codeText.textContent = currentCode.substring(0, charIndex - 1);
-    charIndex--;
-
-    if (charIndex === 0) {
-      isDeleting = false;
-      codeIndex = (codeIndex + 1) % codeLines.length; // Siguiente código
-    }
-  }
-
-  setTimeout(typeCode, isDeleting ? 50 : 100); // Velocidad de escritura y borrado
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  setTimeout(typeCode, 1000); // Iniciar después de 1s
-});
+// Iniciar efecto de escritura
+typeEffect();
 
-// Mostrar cuadro de información y ocultar el menú
+// Función para mostrar el cuadro de información y ocultar el principal
 function showInfo() {
-  document.getElementById("main-menu").classList.add("hidden");
-  document.getElementById("info-box").classList.remove("hidden");
+    document.getElementById("main-card").style.display = "none";
+    document.getElementById("info-card").style.display = "block";
 }
 
-// Volver al menú principal
-function showMenu() {
-  document.getElementById("info-box").classList.add("hidden");
-  document.getElementById("main-menu").classList.remove("hidden");
+// Función para volver al cuadro principal
+function showMain() {
+    document.getElementById("info-card").style.display = "none";
+    document.getElementById("main-card").style.display = "block";
 }
