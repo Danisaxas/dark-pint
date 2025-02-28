@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <!-- Banner Principal -->
   <div class="banner">
     <!-- Icono Circular en el Centro del Banner -->
@@ -19,17 +20,17 @@
   <div class="info-box">
     <h2>Darkness 33k</h2>
     <p>@Exzzex</p>
+    
     <div class="buttons">
       <button>¡Info</button>
       <button>&lt;/&gt; Habilidades</button>
       <button>💼 Teams</button>
     </div>
 
-    <!-- Animación de códigos -->
-    <div class="codes">
-      <div class="code">arr = ['PHP', 'HTML', 'CSS'];</div>
-      <div class="code">function myFunction() { return 'JavaScript'; }</div>
-      <div class="code">const python = 'Python';</div>
+    <!-- Animación de código -->
+    <div class="code-container">
+      <span id="code-text"></span>
+      <span class="cursor">|</span>
     </div>
   </div>
 

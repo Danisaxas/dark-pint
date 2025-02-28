@@ -1,4 +1,4 @@
-/* Reseteo de márgenes y padding */
+/* Reset de márgenes y padding */
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +7,7 @@
 
 /* Estilo del body */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Courier New', monospace;
   background-color: #121212;
   display: flex;
   justify-content: center;
@@ -15,12 +15,14 @@ body {
   height: 100vh;
   flex-direction: column;
   color: white;
+  text-align: center;
+  padding: 10px;
 }
 
-/* Banner y posicionamiento del icono */
+/* Banner */
 .banner {
   width: 100%;
-  height: 300px;
+  height: 250px;
   background-image: url('images/banner.jpg');
   background-size: cover;
   background-position: center;
@@ -30,14 +32,15 @@ body {
   position: relative;
 }
 
+/* Icono Circular */
 .perfil-icon {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   overflow: hidden;
-  border: 5px solid #fff;
+  border: 4px solid #fff;
   position: absolute;
-  bottom: -75px;
+  bottom: -60px;
 }
 
 .perfil-img {
@@ -46,31 +49,31 @@ body {
   object-fit: cover;
 }
 
-/* Estilo del cuadro de información */
+/* Caja de información */
 .info-box {
   background: url('images/blue_grid_background.jpg') no-repeat center center;
   background-size: cover;
-  width: 80%;
-  max-width: 500px;
+  width: 90%;
+  max-width: 450px;
   padding: 20px;
   border-radius: 15px;
   text-align: center;
-  margin-top: 100px;
-  position: relative;
+  margin-top: 80px;
   color: white;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .info-box h2 {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
 }
 
 .info-box p {
   font-size: 16px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
+/* Botones */
 .buttons {
   display: flex;
   justify-content: space-evenly;
@@ -81,45 +84,66 @@ body {
   background-color: #333;
   color: #fff;
   border: none;
-  padding: 10px 20px;
-  border-radius: 25px;
+  padding: 10px 15px;
+  border-radius: 20px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s;
+  font-size: 14px;
 }
 
 .buttons button:hover {
   background-color: #007BFF;
 }
 
-/* Estilo de la animación de los códigos */
-.codes {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* Animación de código */
+.code-container {
   font-size: 18px;
-  opacity: 0;
-  animation: fadeIn 1s forwards;
+  font-weight: bold;
+  min-height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  margin-top: 10px;
+  color: #FFD700;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  width: 100%;
+  max-width: 300px;
+  margin: auto;
 }
 
-.codes .code {
-  opacity: 0;
-  transform: translateX(100%);
-  animation: slideLeft 4s infinite alternate;
+/* Cursor animado */
+.cursor {
+  animation: blink 0.8s infinite;
+  color: white;
 }
 
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slideLeft {
-  0% {
-    opacity: 1;
-    transform: translateX(100%);
-  }
-  100% {
+@keyframes blink {
+  50% {
     opacity: 0;
-    transform: translateX(-100%);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .info-box {
+    width: 95%;
+    max-width: 400px;
+  }
+  .perfil-icon {
+    width: 100px;
+    height: 100px;
+    bottom: -50px;
+  }
+  .banner {
+    height: 200px;
+  }
+  .buttons button {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+  .code-container {
+    font-size: 16px;
   }
 }
