@@ -17,17 +17,17 @@ function typeCode() {
 
   if (!isDeleting) {
     // Escribiendo letra por letra
-    codeText.innerHTML = currentCode.substring(0, charIndex + 1);
+    codeText.textContent = currentCode.substring(0, charIndex + 1);
     charIndex++;
 
     if (charIndex === currentCode.length) {
       isDeleting = true;
-      setTimeout(typeCode, 2000); // Espera antes de borrar
+      setTimeout(typeCode, 1500); // Espera antes de borrar
       return;
     }
   } else {
     // Borrando letra por letra
-    codeText.innerHTML = currentCode.substring(0, charIndex - 1);
+    codeText.textContent = currentCode.substring(0, charIndex - 1);
     charIndex--;
 
     if (charIndex === 0) {
@@ -42,3 +42,15 @@ function typeCode() {
 document.addEventListener("DOMContentLoaded", () => {
   setTimeout(typeCode, 1000); // Iniciar después de 1s
 });
+
+// Mostrar cuadro de información
+function showInfo() {
+  document.getElementById("main-menu").classList.add("hidden");
+  document.getElementById("info-box").classList.remove("hidden");
+}
+
+// Volver al menú principal
+function showMenu() {
+  document.getElementById("info-box").classList.add("hidden");
+  document.getElementById("main-menu").classList.remove("hidden");
+}

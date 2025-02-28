@@ -10,19 +10,18 @@
 
   <!-- Banner Principal -->
   <div class="banner">
-    <!-- Icono Circular en el Centro del Banner -->
     <div class="perfil-icon">
       <img src="images/perfil.jpg" alt="Perfil" class="perfil-img">
     </div>
   </div>
 
-  <!-- Cuadro con texto y botones -->
-  <div class="info-box">
+  <!-- Menú Principal -->
+  <div class="info-box" id="main-menu">
     <h2>Darkness 33k</h2>
     <p>@Exzzex</p>
     
     <div class="buttons">
-      <button>¡Info</button>
+      <button onclick="showInfo()">¡Info</button>
       <button>&lt;/&gt; Habilidades</button>
       <button>💼 Teams</button>
     </div>
@@ -32,6 +31,17 @@
       <span id="code-text"></span>
       <span class="cursor">|</span>
     </div>
+  </div>
+
+  <!-- Cuadro de Información (Oculto por defecto) -->
+  <div class="info-box hidden" id="info-box">
+    <span class="back-btn" onclick="showMenu()">⬅️</span>
+    <h2>Nombre: Daniel</h2>
+    <p><strong>Usuario:</strong> @Exzzex</p>
+    <p><strong>ID:</strong> [7202754124]</p>
+    <p><strong>Edad:</strong> -15</p>
+    <p><strong>BestFriend:</strong> Ryan, Master</p>
+    <p><strong>💖:</strong> Vicky</p>
   </div>
 
   <script src="script.js"></script>
