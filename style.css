@@ -66,9 +66,7 @@ body {
 
 /* Ocultar elementos */
 .hidden {
-  opacity: 0;
-  transform: scale(0.9);
-  pointer-events: none;
+  display: none;
 }
 
 /* Botones */

@@ -8,7 +8,7 @@
 </head>
 <body>
 
-  <!-- Banner Principal -->
+  <!-- Banner -->
   <div class="banner">
     <div class="perfil-icon">
       <img src="images/perfil.jpg" alt="Perfil" class="perfil-img">
@@ -19,7 +19,7 @@
   <div class="info-box" id="main-menu">
     <h2>Darkness 33k</h2>
     <p>@Exzzex</p>
-    
+
     <div class="buttons">
       <button onclick="showInfo()">¡Info</button>
       <button>&lt;/&gt; Habilidades</button>
