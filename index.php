@@ -20,7 +20,7 @@
             <h1>Darkness 33k</h1>
             <p>@Exzzex</p>
             <div class="buttons">
-                <button onclick="showInfo()">¡Info!</button>
+                <button onclick="loadInfo()">¡Info!</button>
                 <button> &lt;/&gt; Habilidades</button>
                 <button>💼 Teams</button>
             </div>
@@ -29,16 +29,8 @@
             </div>
         </div>
 
-        <!-- Cuadro de Información (Oculto por defecto) -->
-        <div class="card info-card" id="info-card">
-            <button class="back-btn" onclick="showMain()">⬅️</button>
-            <h2><strong>Nombre:</strong> Daniel</h2>
-            <p><strong>Usuario:</strong> @Exzzex</p>
-            <p><strong>ID:</strong> [7202754124]</p>
-            <p><strong>Edad:</strong> -15</p>
-            <p><strong>BestFriend:</strong> Ryan, Master</p>
-            <p><strong>💖:</strong> Vicky</p>
-        </div>
+        <!-- Aquí se cargará el contenido de info.html -->
+        <div id="info-container"></div>
     </div>
 
     <script src="script.js"></script>

@@ -13,26 +13,22 @@ const codeElement = document.getElementById("code");
 
 function typeEffect() {
     if (!deleting) {
-        // Escribiendo letra por letra
         if (textIndex < codes[index].length) {
             codeElement.innerHTML += codes[index][textIndex];
             textIndex++;
             setTimeout(typeEffect, 100);
         } else {
-            // Esperar antes de borrar
             setTimeout(() => {
                 deleting = true;
                 typeEffect();
             }, 2000);
         }
     } else {
-        // Borrando letra por letra
         if (textIndex > 0) {
             codeElement.innerHTML = codes[index].substring(0, textIndex - 1);
             textIndex--;
             setTimeout(typeEffect, 50);
         } else {
-            // Cambiar al siguiente código
             deleting = false;
             index = (index + 1) % codes.length;
             setTimeout(typeEffect, 500);
@@ -40,17 +36,21 @@ function typeEffect() {
     }
 }
 
-// Iniciar efecto de escritura
+// Iniciar animación de código
 typeEffect();
 
-// Función para mostrar el cuadro de información y ocultar el principal
-function showInfo() {
-    document.getElementById("main-card").style.display = "none";
-    document.getElementById("info-card").style.display = "block";
+// Función para cargar info.html sin recargar la página
+function loadInfo() {
+    fetch("info.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("main-card").style.display = "none";
+            document.getElementById("info-container").innerHTML = data;
+        });
 }
 
 // Función para volver al cuadro principal
 function showMain() {
-    document.getElementById("info-card").style.display = "none";
+    document.getElementById("info-container").innerHTML = "";
     document.getElementById("main-card").style.display = "block";
 }
