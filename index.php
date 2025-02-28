@@ -15,7 +15,7 @@
     </div>
   </div>
 
-  <!-- Menú Principal -->
+  <!-- Cuadro Principal -->
   <div class="info-box" id="main-menu">
     <h2>Darkness 33k</h2>
     <p>@Exzzex</p>
@@ -36,7 +36,7 @@
   <!-- Cuadro de Información (Oculto por defecto) -->
   <div class="info-box hidden" id="info-box">
     <span class="back-btn" onclick="showMenu()">⬅️</span>
-    <h2>Nombre: Daniel</h2>
+    <h2><strong>Nombre:</strong> Daniel</h2>
     <p><strong>Usuario:</strong> @Exzzex</p>
     <p><strong>ID:</strong> [7202754124]</p>
     <p><strong>Edad:</strong> -15</p>

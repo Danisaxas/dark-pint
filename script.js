@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setTimeout(typeCode, 1000); // Iniciar después de 1s
 });
 
-// Mostrar cuadro de información
+// Mostrar cuadro de información y ocultar el menú
 function showInfo() {
   document.getElementById("main-menu").classList.add("hidden");
   document.getElementById("info-box").classList.remove("hidden");
