@@ -1,22 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página Personalizada</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Página Personal</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="info">
-            <h1 class="animated-text">¡Hola! Soy Daniel</h1>
-            <p class="animated-text">Edad: 15 años</p>
-            <p class="animated-text">Lenguajes de Programación: Python, PHP</p>
-            <p class="animated-text">Telegram: <a href="https://t.me/exzzex" target="_blank">@exzzex</a></p>
-            <p class="animated-text">Team: 33kk</p>
-        </div>
+  <!-- Banner Principal -->
+  <div class="banner">
+    <!-- Icono Circular en el Centro del Banner -->
+    <div class="perfil-icon">
+      <img src="images/perfil.jpg" alt="Perfil" class="perfil-img">
+    </div>
+  </div>
+
+  <!-- Cuadro con texto y botones -->
+  <div class="info-box">
+    <h2>Darkness 33k</h2>
+    <p>@Exzzex</p>
+    <div class="buttons">
+      <button>¡Info</button>
+      <button>&lt;/&gt; Habilidades</button>
+      <button>💼 Teams</button>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Animación de códigos -->
+    <div class="codes">
+      <div class="code">arr = ['PHP', 'HTML', 'CSS'];</div>
+      <div class="code">function myFunction() { return 'JavaScript'; }</div>
+      <div class="code">const python = 'Python';</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
