@@ -1,6 +1,0 @@
-services:
-  - type: web
-    name: dark-pint
-    env: node
-    buildCommand: "yarn install"
-    startCommand: "yarn start"
