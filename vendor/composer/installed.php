@@ -1,19 +1,19 @@
 <?php return array(
     'root' => array(
-        'name' => '__root__',
+        'name' => 'danluis/phpweb',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => 'be572139519a3638552e0e6e09e4a90f2a5504c3',
+        'reference' => '2307ea96dac9099e4da9e70b2733cbaf33e0063c',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
         'dev' => true,
     ),
     'versions' => array(
-        '__root__' => array(
+        'danluis/phpweb' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => 'be572139519a3638552e0e6e09e4a90f2a5504c3',
+            'reference' => '2307ea96dac9099e4da9e70b2733cbaf33e0063c',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

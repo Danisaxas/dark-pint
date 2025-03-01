@@ -11,12 +11,20 @@ class ComposerStaticInit57db6674ec9867bcce62fa7407b36c29
         array (
             'Predis\\' => 7,
         ),
+        'D' => 
+        array (
+            'Danluis\\Phpweb\\' => 15,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
         'Predis\\' => 
         array (
             0 => __DIR__ . '/..' . '/predis/predis/src',
+        ),
+        'Danluis\\Phpweb\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
         ),
     );
 

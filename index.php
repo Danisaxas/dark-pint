@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . '/vendor/autoload.php'; // Ajusta la ruta si es necesario
+require 'vendor/autoload.php';  // Cargar las dependencias de Composer// Ajusta la ruta si es necesario
 
 use Predis\Client;
 
