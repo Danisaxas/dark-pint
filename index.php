@@ -1,8 +1,10 @@
 <?php
-require 'vendor/autoload.php'; // Cargar la biblioteca de Redis
+require __DIR__ . '/vendor/autoload.php'; // Ajusta la ruta si es necesario
+
+use Predis\Client;
 
 // Conexión a Redis
-$redis = new Predis\Client([
+$redis = new Client([
     'scheme' => 'tcp',
     'host'   => 'redis-10371.c14.us-east-1-2.ec2.redns.redis-cloud.com',
     'port'   => 10371,
